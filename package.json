@@ -1,0 +1,88 @@
+{
+  "name": "vue-architecture",
+  "version": "0.0.1",
+  "description": "A sample Vue architecture",
+  "main": "src/main.js",
+  "scripts": {
+    "serve": "webpack-dev-server",
+    "build": "webpack --mode=production",
+    "lint": "eslint --ext .js,.vue src --fix",
+    "test:unit": "jest",
+    "test:e2e": "cypress open",
+    "precommit": "lint-staged",
+    "commitmsg": "node scripts/verifyCommitMsg.js"
+  },
+  "author": "Lucas Vilaboim <lucas@vilaboim.com>",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "ramda": "^0.25.0",
+    "vue": "^2.5.16",
+    "vue-axios": "^2.1.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.53",
+    "@babel/plugin-transform-runtime": "7.0.0-beta.52",
+    "@babel/polyfill": "7.0.0-beta.53",
+    "@babel/preset-env": "7.0.0-beta.52",
+    "@vue/test-utils": "1.0.0-beta.20",
+    "@vue/web-component-wrapper": "^1.2.0",
+    "autoprefixer": "^8.6.5",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.0",
+    "babel-loader": "7.1.5",
+    "babel-plugin-ramda": "^1.6.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "cypress": "^3.0.2",
+    "dotenv-webpack": "^1.5.7",
+    "eslint": "^5.2.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-cypress": "^2.0.1",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "jest": "^23.4.1",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^1.0.0",
+    "lint-staged": "^7.2.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.6",
+    "regenerator-runtime": "^0.12.0",
+    "standard": "^11.0.1",
+    "style-loader": "^0.21.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^1.0.1",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^15.0.11",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "engines": {
+    "yarn": "NO LONGER USED - Please use npm",
+    "npm": "6"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --ext .js,.vue src --fix",
+      "git add"
+    ]
+  }
+}
